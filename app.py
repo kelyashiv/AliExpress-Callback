@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -12,7 +13,5 @@ def callback():
     return f"Received Authorization Code: {auth_code}"
 
 if __name__ == "__main__":
-    import os
-port = int(os.environ.get("PORT", 10000))  # אם PORT לא קיים, השתמש ב-10000
-app.run(host="0.0.0.0", port=port)
-
+    port = int(os.environ.get("PORT", 10000))  # שימוש ב-PROD PORT
+    app.run(host="0.0.0.0", port=port)
