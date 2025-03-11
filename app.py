@@ -15,3 +15,7 @@ def callback():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # שימוש ב-PROD PORT
     app.run(host="0.0.0.0", port=port)
+
+git add main.py
+git commit -m "הוספת בדיקה להחזרת 123"
+git push origin main
