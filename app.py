@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Server is running!"
+    return "123"
 
 @app.route("/callback")
 def callback():
